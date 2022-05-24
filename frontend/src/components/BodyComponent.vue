@@ -22,10 +22,15 @@
 	<div class="container">
 		<div class="row text-center">
 			<div class="col">
-				<img alt="Cthullu and Lovecraft" src="../assets/home_image_3.png" class="img-fluid mt-3">
+				<img alt="Cthullu and Lovecraft" src="../assets/home_image_3.png" class="img-fluid">
 			</div>
 		</div>
 	</div>
 </div>
-
 </template>
+
+<style scoped>
+	h1 {
+		font-family: 'Macondo', cursive;
+	}
+</style>

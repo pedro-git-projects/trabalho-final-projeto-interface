@@ -8,9 +8,6 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <router-link class="nav-link active" aria-current="page" to="/">Home</router-link>
-        </li>
-        <li class="nav-item">
           <router-link class="nav-link" to="/instrucoes">Instruções</router-link>
         </li>
 		<li class="nav-item">
@@ -27,4 +24,11 @@
 		</ul>
     </div>
   </div>
-</nav></template>
+</nav>
+</template>
+
+<style scoped>
+.navbar-brand {
+		font-family: 'Macondo', cursive;
+}
+</style>
