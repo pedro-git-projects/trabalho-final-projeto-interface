@@ -15,8 +15,8 @@
 					pode gerar investigadores para a sétima edição do jogo 
 					<i>Call of Cthullu</i> da Chaosium.
 				</p>
-				<button type="button" class="btn btn-primary">Criar Agora</button>
-			</div>
+<router-link :to="{ path: '/criar' }"><button type="button" class="btn btn-primary">Criar Agora</button></router-link>			
+</div>
 		</div>
 	</div>
 	<div class="container">
