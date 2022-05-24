@@ -12,7 +12,7 @@ Obrigatoriamente, você deve utilizar Biblioteca Bootstrap e também entregar um
 
 ## Tecnologias utilizadas
 
-- Akira
+- Figma 
 
 - Bootstrap
 
