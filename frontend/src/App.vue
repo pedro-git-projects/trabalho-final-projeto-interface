@@ -1,13 +1,23 @@
 <template>
-	<h1>Cthullu Online</h1>
+	<MyHeader/>
+	<BodyComponent/>
+	<MyFooter/>
 </template>
 
 <script>
-export default {
+import MyHeader from "./components/MyHeader.vue"
+import BodyComponent from "./components/BodyComponent.vue"
+import MyFooter from "./components/MyFooter.vue"
 
+export default {
+	name: 'App',
+	components: {
+		MyHeader,
+		BodyComponent,
+		MyFooter,
+	}
 }
 </script>
 
 <style>
-
 </style>
