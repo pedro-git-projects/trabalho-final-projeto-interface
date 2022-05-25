@@ -5,8 +5,9 @@
 			<div class="col">
 				<h1 class="mt-5">Gerador de Investigadores</h1>
 				<hr>
-				<form-tag>
+				<form-tag @myevent="submitHandler" name="myform" :event="myevent">
 				<text-input
+					v-model="nome"
 					label="Nome"
 					type="text"
 					name="nome"
@@ -15,6 +16,7 @@
 				</text-input>
 
 				<text-input
+					v-model="idade"
 					label="Idade"
 					type="number"
 					name="idade"
@@ -23,6 +25,7 @@
 				</text-input>
 
 				<text-input
+					v-model="residencia"
 					label="Residência"
 					type="text"
 					name="residencia"
@@ -31,6 +34,7 @@
 				</text-input>
 
 				<text-input
+					v-model="residencia"
 					label="Local de Nascimento"
 					type="text"
 					name="local de nascimento"
@@ -39,6 +43,7 @@
 				</text-input>
 
 				<text-input
+					v-model="ocupacao"
 					label="Ocupação"
 					type="text"
 					name="ocupacao"
@@ -64,6 +69,20 @@ export default {
 	components: {
 		FormTag,
 		TextInput,
-	}
-    }
+	},
+	data() {
+		return {
+			nome: "",
+			idade: "",
+			residencia: "",
+			nascimento: "",
+			ocupacao: "",
+		}	
+	},
+	methods: {
+		submitHandler() {
+			console.log("Metodo invocado")
+		}
+	},
+}
 </script>
