@@ -91,9 +91,10 @@ export default {
     // Using yup to generate a validation schema
     // https://vee-validate.logaretm.com/v4/guide/validation#validation-schemas-with-yup
 	let vazio = "Este campo é obrigatório"
+	let intervalo = "Insira um número entre 1 e 99"
     const schema = Yup.object().shape({
 	nome: Yup.string().required(vazio),
-	idade: Yup.number("Insira um número entre 1 e 99").required(vazio).typeError("Insira um número entre 1 e 99"),
+	idade: Yup.number(intervalo).max(99, intervalo).min(1,intervalo).required(vazio).typeError("Insira um número entre 1 e 99"),
 	residencia: Yup.string().required(vazio),
 	nascimento: Yup.string().required(vazio),
 	ocupacao: Yup.string().required(vazio),
