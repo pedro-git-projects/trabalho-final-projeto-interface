@@ -10,10 +10,8 @@
 			:max="max"
 			:value="value"
 			:autocomplete="name + '-new'"
-			class="form-control"
-		>
+			class="form-control">
 	</div>
-	
 </template>
 
 <script>

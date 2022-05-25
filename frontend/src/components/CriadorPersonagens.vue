@@ -12,8 +12,7 @@
 					label="Nome"
 					type="text"
 					name="nome"
-					required="true"
-				>
+					required="true">
 				</text-input>
 
 				<text-input
@@ -77,27 +76,25 @@ export default {
 	},
 	data() {
 		return {
-			nome: "",
-			idade: "", 
-			residencia: "",
-			nascimento: "",
+			nome: null, 
+			idade:"", 
+			residencia: "", 
+			nascimento: "", 
 			ocupacao: "",
 		}
 	},
 	methods: {
 		submitHandler() {
-
-		const payload = {
-			nome: this.nome,	
-			idade: this.idade,
-			residencia: this.residencia,
-			nascimento: this.nascimento,
-			ocupacao: this.ocupacao,
-		}
-
 		const requestOptions = {
                 method: "POST",
-                body: JSON.stringify(payload),
+                body: JSON.stringify( {
+					nome: this.nome,	
+					idade: parseInt(this.idade),
+					residencia: this.residencia,
+					nascimento: this.nascimento,
+					ocupacao: this.ocupacao,
+					}
+				),
             }			
 
         fetch("http://localhost:4000/v1/criar", requestOptions)
@@ -105,9 +102,6 @@ export default {
 		.then((data) => {
 			console.log(data)
 		})
-
-		console.log(payload)
-		console.log(this.nome)
 
 		}
 	},
