@@ -1,5 +1,6 @@
 <template>
-	<form  
+
+<form 
 		@submit.prevent="submit"
 		:ref="name"
 		:event="event"
@@ -8,7 +9,8 @@
 		:action="action" 
 		class="needs-validation" 
 		novalidate>
-	<slot></slot>
+
+		<slot></slot>
 	</form>
 </template>
 
@@ -18,15 +20,14 @@ export default {
 	props: ["mehotd", "action", "name", "event"],
 	methods: {
 		submit() {
-			let myForm = this.$refs[this.$props.name]
+		let myForm = this.$refs[this.$props.name]
 
-			if(myForm.checkValidity()) {
-				console.log("My event name", this.$props['event'])
-				console.log("Name", this.$props.name)
+		if (myForm.checkValidity()) {
+			console.log("My event name", this.$props['event'])
+			console.log("Name", this.$props.name)
 				this.$emit(this.$props['event'])
-			}
-			myForm.classList.add("was-validated")
-		}
-	}
-}
-</script>
+				}
+				myForm.classList.add("was-validated")
+        }
+    },
+}</script>
